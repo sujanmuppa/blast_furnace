@@ -66,6 +66,3 @@ def predict():
         pred_next_4hr = models['model_4'].predict(features_next_4hr)
 
         return render_template('result.html', next_1hr=pred_next_1hr[0], next_2hr=pred_next_2hr[0], next_3hr=pred_next_3hr[0], next_4hr=pred_next_4hr[0])   
-
-if __name__ == '__main__':
-    app.run(debug=True)
